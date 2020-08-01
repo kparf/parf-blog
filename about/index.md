@@ -1,10 +1,10 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: Обо мне
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: Обо мне
   order: 3
 ---
 
-I am a person that writes stuff.
+Я фронтенд разработчик

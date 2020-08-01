@@ -1,14 +1,14 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Home
+  key: Главная
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<h1>Последние 3 поста</h1>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<p>Больше статей вы найдете <a href="{{ '/posts/' | url }}">в архиве</a>.</p>
