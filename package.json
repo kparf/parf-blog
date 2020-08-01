@@ -6,7 +6,8 @@
     "build": "eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "deploy": "cd _site && rsync -avz -e \"ssh -i ~/.ssh/ocean\" --progress . practice@practice.by:/var/www/practice.by/html/"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "editorconfig-checker": "^3.1.0",
     "luxon": "^1.21.3",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5"
