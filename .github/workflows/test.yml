@@ -1,10 +1,11 @@
-name Test
+name: Test
 
 on:
   pull_request:
   push:
     branches:
       - master
+
 jobs:
   lint:
     runs-on: ubuntu-latest
