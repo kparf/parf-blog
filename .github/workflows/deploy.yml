@@ -20,9 +20,9 @@ jobs:
       - run: set -eu
       - run: mkdir "$HOME/.ssh"
       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key2"
+      - run: chmod 600 "$HOME/.ssh/key"
       # Build
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: cd _site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . practice@practice.by:/var/www/practice.by/html/
+      - run: cd _site && rsync -e "ssh -i $HOME/.ssh/key2 -o StrictHostKeyChecking=no" --archive --compress --delete . practice@practice.by:/var/www/practice.by/html/
