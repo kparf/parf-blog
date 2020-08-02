@@ -3,7 +3,7 @@ title: Datalist элемент (перевод)
 description: Перевод статьи о элементе datalist
 date: 2020-08-01
 tags:
-	- html
+  - html
 layout: layouts/post.njk
 ---
 [Оригинал](https://funwithforms.com/posts/datalist/)
@@ -14,11 +14,11 @@ layout: layouts/post.njk
 <label for="formelement">Your favourite form element?</label>
 <input list="formelements" id="formelement" name="formelement" />
 <datalist id="formelements">
- <option value="input">
- <option value="button">
- <option value="select">
- <option value="datalist">
- <option value="legend">
+  <option value="input">
+  <option value="button">
+  <option value="select">
+  <option value="datalist">
+  <option value="legend">
 </datalist>
 ```
 В первую очередь, вам нужен input элемент. Чтобы объединить input и datalist вам нужно будет прописать id datalist элемента в list атрибут input элемента. После этого вы можете определить различные значения в option элементах.
