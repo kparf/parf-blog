@@ -22,6 +22,11 @@ body {
 p:last-child {
   margin-bottom: 0;
 }
+
+video {
+  width: 100%;
+}
+
 p,
 .tmpl-post li,
 img {
