@@ -10,16 +10,16 @@ layout: layouts/post.njk
 В этой статье вы познакомитесь с тем что такое **`<datalist>`**, как его использовать и почему вы на вряд ли возмете его к себе.
 
 ## Как использовать datalist
-``` html/
-<label for="formelement">Your favourite form element?</label>
-<input list="formelements" id="formelement" name="formelement" />
-<datalist id="formelements">
-  <option value="input">
-  <option value="button">
-  <option value="select">
-  <option value="datalist">
-  <option value="legend">
-</datalist>
+``` html
+  <label for="formelement">Your favourite form element?</label>
+  <input list="formelements" id="formelement" name="formelement" />
+  <datalist id="formelements">
+    <option value="input">
+    <option value="button">
+    <option value="select">
+    <option value="datalist">
+    <option value="legend">
+  </datalist>
 ```
 В первую очередь, вам нужен input элемент. Чтобы объединить input и datalist вам нужно будет прописать id datalist элемента в list атрибут input элемента. После этого вы можете определить различные значения в option элементах.
 
