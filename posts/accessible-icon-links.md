@@ -6,7 +6,7 @@ tags:
   - html
 layout: layouts/post.njk
 ---
-[Оригинал](https://hugogiraudel.com/2020/12/10/accessible-icon-links/)
+[Оригинал](https://kittygiraudel.com/2020/12/10/accessible-icon-links/)
 
 В современном веб дизайне не редкость наличие ссылки (или кнопки) которая визуально не имеет текста и представляет собой просто иконку. Рассмотрим социальные иконки или элементы на компактной панели навигации. Полагается исключительно на иконографию может быть рискованным, но это может работать, особенно когда значки четкие и хорошо известные.
 
@@ -27,7 +27,7 @@ layout: layouts/post.njk
 
 ``` html
   <!-- Incomplete: please do *not* copy and paste this snippet -->
-  <a href="https://twitter.com/HugoGiraudel">
+  <a href="https://twitter.com/KittyGiraudel">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">…</svg>
   </a>
 ```
@@ -36,7 +36,7 @@ layout: layouts/post.njk
 
 ``` html
   <!-- Incomplete: please do *not* copy and paste this snippet -->
-  <a href="https://twitter.com/HugoGiraudel">
+  <a href="https://twitter.com/KittyGiraudel">
     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">…</svg>
     <span class="sr-only">Twitter</span>
   </a>
@@ -46,7 +46,7 @@ layout: layouts/post.njk
 
 ``` html
   <!-- Incomplete: please do *not* copy and paste this snippet -->
-  <a href="https://twitter.com/HugoGiraudel">
+  <a href="https://twitter.com/KittyGiraudel">
     <svg
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ layout: layouts/post.njk
 Последний, но тем не менее важный, svg элементы фокусируемые в IE, что становится все менее и менее серьезной проблемой - тем не менее, мы должны исправить это с помощью атрибута focusable.
 
 ``` html
-  <a href="https://twitter.com/HugoGiraudel">
+  <a href="https://twitter.com/KittyGiraudel">
     <svg    aria-hidden="true"
       focusable="false"
       xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ layout: layouts/post.njk
 В качестве последнего штриха я бы также рекомендовал добавіть текстовое содержание в тарібут заголовка ссылкі. Это не улучшает доступность как таковую, но при наведении на ссылку появляется небольшая всплывающая подсказка, которая может быть полезна для неочевидных значков.
 
 ``` html
-  <a href="https://twitter.com/HugoGiraudel" title="Twitter">
+  <a href="https://twitter.com/KittyGiraudel" title="Twitter">
     <svg
       aria-hidden="true"
       focusable="false"
@@ -91,7 +91,7 @@ layout: layouts/post.njk
 
 ## Как react компонент
 
-Теперь, когда мы разобрались, как сделать наши ссылки на значки доступными, мы можем безопасно создать для этого небольшой react компонент (с глаз долой из сердца вон), используя [`<VisuallyHidden />` компонент](https://hugogiraudel.com/snippets/visually-hidden-component/).
+Теперь, когда мы разобрались, как сделать наши ссылки на значки доступными, мы можем безопасно создать для этого небольшой react компонент (с глаз долой из сердца вон), используя [`<VisuallyHidden />` компонент](https://kittygiraudel.com/snippets/visually-hidden-component/).
 
 ``` jsx
   const IconLink = ({ Icon, ...props }) => (
@@ -109,7 +109,7 @@ layout: layouts/post.njk
       <path d='M16 3.538a6.461 6.461 0 0 1-1.884.516 3.301 3.301 0 0 0 1.444-1.816 6.607 6.607 0 0 1-2.084.797 3.28 3.28 0 0 0-2.397-1.034 3.28 3.28 0 0 0-3.197 4.028 9.321 9.321 0 0 1-6.766-3.431 3.284 3.284 0 0 0 1.015 4.381A3.301 3.301 0 0 1 .643 6.57v.041A3.283 3.283 0 0 0 3.277 9.83a3.291 3.291 0 0 1-1.485.057 3.293 3.293 0 0 0 3.066 2.281 6.586 6.586 0 0 1-4.862 1.359 9.286 9.286 0 0 0 5.034 1.475c6.037 0 9.341-5.003 9.341-9.341 0-.144-.003-.284-.009-.425a6.59 6.59 0 0 0 1.637-1.697z' />
     </svg>)const MyComponent = props => (
     <IconLink
-      href='https://twitter.com/HugoGiraudel'
+      href='https://twitter.com/KittyGiraudel'
       title='Twitter'
       Icon={Twitter}
     />)
@@ -117,7 +117,7 @@ layout: layouts/post.njk
 
 # Что еще почитать
 
-Открытие ссылки в новой вкладке также связано с соображениями доступности, который нельзя упускать из виду. Я рассмотрел [открытие ссылки в новой вкладке](https://hugogiraudel.com/2020/01/17/accessible-links-and-buttons-with-react/##open-a-tab-for-me-will-you) в другой статье. Несмотря на то, что в статье пример на react это не должно вызвать проблем у читателя.
+Открытие ссылки в новой вкладке также связано с соображениями доступности, который нельзя упускать из виду. Я рассмотрел [открытие ссылки в новой вкладке](https://kittygiraudel.com/2020/01/17/accessible-links-and-buttons-with-react/##open-a-tab-for-me-will-you) в другой статье. Несмотря на то, что в статье пример на react это не должно вызвать проблем у читателя.
 
 Сара Суэйдан просмотрела [кнопки со специальными значками](https://www.sarasoueidan.com/blog/accessible-icon-buttons/) в своем блоге и поделилась интересными советами по отладке доступности имен в браузерном инструменте разработчика.
 
